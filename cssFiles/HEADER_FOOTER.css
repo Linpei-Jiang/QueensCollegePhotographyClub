@@ -1,0 +1,180 @@
+/*----- HEADER SECTION START -----*/
+header {
+    z-index: 999999;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    background: var(--white);
+}
+
+.logo {
+    position: absolute;
+    left: 2vw;
+}
+
+.logo img {
+    width: 125px;
+}
+
+#logoWhite {display: none;}
+
+/*DESKTOP NAVIGATION*/
+.desktopNav {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    gap: 35px;
+    font-size: 18px;
+}
+
+.desktopNav li, .submissions {cursor: pointer;}
+.desktopNav li a {color: var(--header-footer);}
+
+.desktopNav li:hover, .submissions:hover {
+    font-weight: 500;
+}
+
+.desktopNav li:hover ul li {
+    font-weight: normal;
+}
+
+.dropDownSign {font-size: 8px; position: absolute; top: 41px; margin-left: 4px;}
+
+.dropdown {
+    background: var(--white);
+    width: 250px;
+    display: none;
+    position: absolute;
+    margin-left: -20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dropdown li {
+    padding: 5px 20px;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.dropdown li a {
+    color: var(--header-footer);
+}
+
+.dropdown li:hover a {
+    color: var(--hover) !important;
+}
+
+.active:hover .dropdown {
+    display: block;
+}
+
+.active ul li a:hover {
+    display: flex;
+    width: 200px;
+}
+
+/*MOBILE NAVIGATION*/
+.menu {
+    z-index: 616;
+    position: absolute;
+    right: 2vw;
+    height: 40px;
+    display: none; /* hidden on desktop */
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.menu span {
+    border-radius: 5px;
+    width: 35px;
+    height: 6px;
+    background: var(--header-footer);
+    cursor: pointer;
+}
+
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--header-footer);
+    padding: 20px 0;
+}
+
+.mobileMenu a {
+    margin-left: 50px;
+    display: block;
+    padding: 14px 0;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* When active */
+.menu.active {position: fixed; top: 20px;}
+.menu.active span:nth-child(1) {transform: translateY(12px) rotate(45deg);}
+.menu.active span:nth-child(2) {opacity: 0;}
+.menu.active span:nth-child(3) {transform: translateY(-12px) rotate(-45deg);}
+
+#hamburger.menu.active span {background: white;}
+
+/* When menu is open */
+@media (max-width: 900px) {
+    .mobileMenu.open {
+        display: flex;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .desktopNav, .submissions {display: none;}
+    .menu {display: flex;}
+
+    .loginBtn {
+        padding: 0;
+        margin-bottom: -18px;
+        width: 100%;
+    }
+}
+
+.submissions {
+    position: absolute;
+    right: 4vw;
+
+    li a {color: var(--header-footer);}
+}
+
+#header[data-page="home"] header {.positionHome {font-weight: bold;}}
+#header[data-page="news"] header {.positionNews {font-weight: bold;}}
+#header[data-page="submissions"] header {.positionSubmissions {font-weight: bold;}}
+/*----- HEADER SECTION END -----*/
+
+/*----- FOOTER SECTION START -----*/
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+    padding-right: 4%;
+    height: 250px;
+    background: var(--header-footer);
+}
+
+footer ul {
+    padding: 50px 0;
+    height: auto;
+    list-style: none;
+}
+
+ul h4 {color: white;}
+footer li a {color: rgba(255, 255, 255, 0.84);}
+footer li a:hover {color: var(--white);}
+@media (max-width: 700px) {footer {padding: 0 5px; justify-content: space-evenly;}}
+@media(max-width: 500px) {footer {padding-right: 0; justify-content: center; gap: 15px;}}
+/*----- FOOTER SECTION END -----*/

@@ -1,0 +1,36 @@
+/*HOME PAGE HEADER START*/
+#logoWhite {display: block;}
+#logoColored {display: none;}
+header, a {
+    background: none;
+    color: white !important;
+}
+.dropdown {background: var(--header-footer);}
+.menu span {background: white;}
+body.transparent header {
+    background: var(--white);
+    header, a {color: black !important;}
+    .dropdown {background: var(--white);}
+    .menu span {background: var(--header-footer);}
+    #logoWhite {display: none;}
+    #logoColored {display: block;}
+}
+body.transparent header {
+    background: var(--white);
+    header {color: var(--header-footer) !important;}
+    .dropdown {background: var(--white);}
+    .menu span {background: var(--header-footer);}
+    #logoWhite {display: none;}
+    #logoColored {display: block;}
+    .mobileMenu a {color: white !important;}
+}
+@media (max-width: 768px) {.logo {left: 5vw;} .menu {right: 5vw;}}
+/*HOME PAGE HEADER END*/
+
+/*HERO SECTION START*/
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: var(--header-footer);
+}
+/*HERO SECTION END*/
