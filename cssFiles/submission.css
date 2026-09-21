@@ -1,4 +1,4 @@
-h1, h3 {color: var(--header-footer); text-align: center}
+h1, h3 {color: var(--graphite); text-align: center}
 #photoForm {
     padding: 100px 0;
     width: 100%;
@@ -14,7 +14,7 @@ h1, h3 {color: var(--header-footer); text-align: center}
     padding: 20px 10px;
     margin:  -5px 0;
     border-radius: 15px;
-    border: none;
+    border: .5px solid var(--graphite);
 }
 #name {margin-top: 20px;}
 #description {height: 200px;}
@@ -34,7 +34,7 @@ button {
     align-items: center;
     justify-content: center;
     height: 40px;
-    background: #3A6FF8;
+    background: var(--graphite);
     border: none;
     border-radius: 20px;
     color: white;
@@ -43,7 +43,7 @@ button {
 }
 
 button:hover {
-    background: #24469c;
+    background: var(--accent-orange);
 }
 
 @media (max-width: 768px) {

@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="cssFiles/root.css">
     <link rel="stylesheet" href="cssFiles/HEADER_FOOTER.css">
     <link rel="stylesheet" href="cssFiles/submission.css">
+    <link rel="icon" type="svg" href="images/PhotoClubLogo.svg">
 </head>
 <body>
     <header id="header" data-page="submissions"></header>
 
     <form id="photoForm">
         <h1>Queens College Photo Submission Form</h1>
-        <input type="text" id="name" placeholder="Your Name" required><br>
-        <input type="text" id="year" placeholder="Your Year at QC" required><br>
-        <input type="text" id="social" placeholder="Your Social Media Handle/Website" required><br>
-        <input type="text" id="title" placeholder="Photo Title" required><br>
+        <input type="text" id="name" placeholder="Name" required><br>
+        <input type="text" id="year" placeholder="Graduation Year" required><br>
+        <input type="text" id="social" placeholder="Social Media Handle/Website" required><br>
+        <input type="text" id="title" placeholder="Title of Photograph" required><br>
         <textarea id="description" placeholder="Description"></textarea><br>
         <input type="file" id="file" accept="image/*" required><br>
         <div class="consent">
             <input type="checkbox" id="consent" value="yes" required><label for="consent">
-                By checking this box you give us to the permission to use your photo in out zines, instagram showcases, and promotional materials with credit
+            By checking this box, you permit the Queens College Photography Club to include your work in club zines, instagram showcases, and promotional materials with due credit
             </label><br>
         </div>
         <button type="submit">Submit</button>
@@ -29,7 +30,8 @@
 
     <footer id="footer"></footer>
 </body>
-    <script src="jsFiles/submission.js"></script>
     <script type="module" src="jsFiles/HEADER_FOOTER.js"></script>
     <script src="jsFiles/header.js"></script>
+    <script src="jsFiles/heroSlider.js"></script>
+    <script src="jsFiles/submission.js"></script>
 </html>

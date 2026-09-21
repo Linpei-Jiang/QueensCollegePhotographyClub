@@ -18,7 +18,7 @@ document.getElementById("photoForm").addEventListener("submit", async (e) => {
             consent: document.getElementById("consent").value
         };
 
-        await fetch("https://script.google.com/macros/s/AKfycbwcRRWQKKcXA8Ng7oS6EJs4AeOgZOFiQ4djTbrNEGeiSw06PVIdOSwaQrv7uk-Bz-56jA/exec", {
+        await fetch("https://script.google.com/macros/s/AKfycbyraMovAEM96hcy7G8lXkq2WWAKyu4ly4rrpO3hjysI-GzTxmad2uiZvZYiNm-hncPmeg/exec", {
             method: "POST",
             body: JSON.stringify(payload),
             headers: { "Content-Type": "application/json" },

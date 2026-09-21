@@ -14,10 +14,6 @@ header {
     left: 2vw;
 }
 
-.logo img {
-    width: 125px;
-}
-
 #logoWhite {display: none;}
 
 /*DESKTOP NAVIGATION*/
@@ -30,7 +26,7 @@ header {
 }
 
 .desktopNav li, .submissions {cursor: pointer;}
-.desktopNav li a {color: var(--header-footer);}
+.desktopNav li a {color: var(--graphite);}
 
 .desktopNav li:hover, .submissions:hover {
     font-weight: 500;
@@ -59,11 +55,11 @@ header {
 }
 
 .dropdown li a {
-    color: var(--header-footer);
+    color: var(--graphite);
 }
 
 .dropdown li:hover a {
-    color: var(--hover) !important;
+    color: var(--accent-orange) !important;
 }
 
 .active:hover .dropdown {
@@ -90,7 +86,7 @@ header {
     border-radius: 5px;
     width: 35px;
     height: 6px;
-    background: var(--header-footer);
+    background: var(--graphite);
     cursor: pointer;
 }
 
@@ -102,7 +98,7 @@ header {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: var(--header-footer);
+    background: var(--graphite);
     padding: 20px 0;
 }
 
@@ -146,7 +142,7 @@ header {
     position: absolute;
     right: 4vw;
 
-    li a {color: var(--header-footer);}
+    li a {color: var(--graphite);}
 }
 
 #header[data-page="home"] header {.positionHome {font-weight: bold;}}
@@ -163,7 +159,7 @@ footer {
     gap: 40px;
     padding-right: 4%;
     height: 250px;
-    background: var(--header-footer);
+    background: var(--graphite);
 }
 
 footer ul {
@@ -173,8 +169,8 @@ footer ul {
 }
 
 ul h4 {color: white;}
-footer li a {color: rgba(255, 255, 255, 0.84);}
-footer li a:hover {color: var(--white);}
+footer ul li a {color: rgba(255, 255, 255, 0.84) !important;}
+footer ul li a:hover {color: var(--accent-orange) !important; }
 @media (max-width: 700px) {footer {padding: 0 5px; justify-content: space-evenly;}}
 @media(max-width: 500px) {footer {padding-right: 0; justify-content: center; gap: 15px;}}
 /*----- FOOTER SECTION END -----*/

@@ -5,21 +5,21 @@ header, a {
     background: none;
     color: white !important;
 }
-.dropdown {background: var(--header-footer);}
+.dropdown {background: none;}
 .menu span {background: white;}
 body.transparent header {
     background: var(--white);
     header, a {color: black !important;}
     .dropdown {background: var(--white);}
-    .menu span {background: var(--header-footer);}
+    .menu span {background: var(--graphite);}
     #logoWhite {display: none;}
     #logoColored {display: block;}
 }
 body.transparent header {
     background: var(--white);
-    header {color: var(--header-footer) !important;}
+    header {color: var(--graphite) !important;}
     .dropdown {background: var(--white);}
-    .menu span {background: var(--header-footer);}
+    .menu span {background: var(--graphite);}
     #logoWhite {display: none;}
     #logoColored {display: block;}
     .mobileMenu a {color: white !important;}
@@ -29,8 +29,278 @@ body.transparent header {
 
 /*HERO SECTION START*/
 .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100vh;
-    background: var(--header-footer);
+    background: var(--graphite);
 }
+.item {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+    transition: 0.3s;
+}
+.item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.item:nth-child(1),
+.item:nth-child(2) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+.item:nth-child(3) {left: calc(80%);}
+.item:nth-child(4) {left: calc(80% + 220px);}
+.item:nth-child(5) {left: calc(80% + 440px); opacity: 0;}
+.item .content {
+    flex-direction: column;
+    align-items: start;
+    width: 300px;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white);
+    display: none;
+}
+.content a {color: var(--graphite) !important;}
+.blur {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 50%;
+    /*background: black;*/
+    border-radius: 50%;
+}
+.item:nth-child(2) .content {display: flex;}
+.item:nth-child(2) .blur {opacity: 0;}
+.item .name {
+    opacity: 0;
+    font-size: 25px;
+    font-weight: bold;
+    animation: heroShowImage 1s ease-in-out 1 forwards;
+}
+.item .description {
+    text-align: start;
+    opacity: 0;
+    margin: 25px 0;
+    animation: heroShowImage 1s ease-in-out 0.3s 1 forwards;
+}
+.item a {
+    color: var(--graphite);
+    opacity: 0;
+    padding: 5px 25px;
+    background: var(--soft-gray);
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    animation: heroShowImage 1s ease-in-out 0.6s 1 forwards;
+}
+.item a:hover {background: var(--accent-orange);}
+.button {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    text-align: center;
+}
+.slideBtn {
+    margin: 0 10px;
+    width: 50px;
+    aspect-ratio: 1/1;
+    line-height: 50px;
+    text-align: center;
+    background: var(--soft-gray);
+    display: inline-block;
+    border-radius: 50%;
+    color: var(--graphite);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.slideBtn:hover {
+    background: var(--accent-orange);
+}
+@media (max-width: 768px) {.item .content {left: 50px;}}
+@media (max-width: 550px) {.item .content {left: 25px;}}
 /*HERO SECTION END*/
+
+/*UPCOMING EVENTS & MEETINGS SECTION START*/
+.eventsMeetings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.eventsMeetings h1 {text-align: center;}
+.upcomingEventsUpdates {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: space-between;
+    gap: 10px;
+}
+.upcomingEventsUpdatesCard {
+    border-radius: 10px;
+    padding: 20px 20px 50px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    transition: 0.3s;
+    position: relative;
+}
+.upcomingEventsUpdatesCard:hover {
+    scale: 0.99;
+    box-shadow: 0 4px 6px -1px var(--graphite),
+    0 2px 4px -1px var(--graphite);
+}
+.upcomingEventsUpdatesCard h2, .upcomingEventsUpdatesCard p, .eventDetails {color: var(--graphite);}
+.eventDetails {
+    width: calc(100% - 40px);
+    display: flex;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    justify-content: space-between;
+}
+/*UPCOMING EVENTS & MEETINGS SECTION END*/
+
+/*NEWS & UPDATES SECTION START*/
+.newsUpdates {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.description {
+    font-size: 18px;
+    margin-top: -5px;
+    text-align: center;
+}
+.newsUpdatesGrid {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    justify-content: space-between;
+    gap: 20px;
+}
+.newsUpdatesGridCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px 10px 50px 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    color: var(--graphite);
+    transition: 0.3s;
+}
+.newsUpdatesGridCard:hover {
+    scale: 0.99;
+    box-shadow: 0 4px 6px -1px var(--graphite),
+    0 2px 4px -1px var(--graphite);
+}
+.newsUpdatesGridCardImage {
+    width: 100%;
+    aspect-ratio: 1/0.7;
+    background: var(--graphite);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+.newsUpdatesGridCard h3 {padding: 15px 0 25px 0; line-height: 20px;}
+.newsUpdatesGridCard p {font-size: 14px;}
+.newsUpdatesGridCard hr {
+    background: var(--graphite);
+    width: 95%;
+    position: absolute;
+    bottom: 40px;
+    left: 2.5%;
+    height: 2px;
+}
+.newsUpdatesGridCardNewsOrUpdatesDates {
+    width: 100%;
+    position: absolute;
+    padding: 0 10px;
+    left: 0;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.all {padding: 10px 30px; background: var(--graphite); border-radius: 5px; margin-top: 20px; transition: 0.3s; cursor: pointer;}
+.all:hover {background: var(--accent-orange); font-weight: bold}
+@media (max-width: 1000px) {.newsUpdates {margin: 0;}}
+@media (max-width: 900px) {.newsUpdatesGrid {grid-template-columns: 1fr 1fr;}}
+@media (max-width: 700px) {.newsUpdatesGridCard h2 {font-size: 20px; padding: 10px 0;}}
+@media (max-width: 500px) {.newsUpdatesGrid {grid-template-columns: 1fr}}
+/*NEWS & UPDATES SECTION END*/
+
+/*ABOUT US SECTION START*/
+.aboutUs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.aboutUsLeft, .aboutUsRight {width: 48%; height: 350px;}
+.aboutUsLeft {border-radius: 10px;}
+.aboutUsLeft {
+    height: 350px;
+    background-image: url("images/PhotoClubLogoColored.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.aboutUsRight {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.aboutUsRight p {margin-top: 10px;}
+.btn  {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.aboutUsRight a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+    background: var(--graphite);
+}
+.aboutUsRight a:hover {background: var(--accent-orange); font-weight: bold;}
+@media (max-width: 900px) {
+    .aboutUs {flex-direction: column;}
+    .aboutUsLeft, .aboutUsRight {width: 100%;}
+    .aboutUsRight {height: auto;}
+    .aboutUsRight h2 {padding-top: 10px;}
+    .aboutUsRight a {position: relative; margin-top: 20px;}
+}
+@media (max-width: 786px) {
+    .aboutUsRight {align-items: center; text-align: center;}
+}
+/*ABOUT US SECTION END*/
