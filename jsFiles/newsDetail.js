@@ -7,7 +7,7 @@ function slugify(text) {
 const params = new URLSearchParams(window.location.search);
 const slug = params.get("title");
 
-fetch("https://opensheet.elk.sh/1oVwuDlwg7g-13UAW6Ih6OcnW8YPSWjtDZzm3kFSNiB4/News%20&%20Updates")
+fetch("https://opensheet.elk.sh/1hYcNs4Ujxq3B-DQhU9R45S_Hdw7_kuig66DgsnwzgfI/News%20&%20Updates")
     .then(res => res.json())
     .then(data => {
         const item = data.find(n => slugify(n.title) === slug);

@@ -1,10 +1,12 @@
-fetch("https://opensheet.elk.sh/1oVwuDlwg7g-13UAW6Ih6OcnW8YPSWjtDZzm3kFSNiB4/General%20Photo%20Submission")
+fetch("https://opensheet.elk.sh/1hYcNs4Ujxq3B-DQhU9R45S_Hdw7_kuig66DgsnwzgfI/General%20Photo%20Submission")
     .then(res => res.json())
     .then(data => {
 
-        const sorted = data.sort((a, b) => a.name.localeCompare(b.name));
+        const approved = data.filter(item => item.status === "Approved");
 
-        const firstSix = sorted.slice(0, 6);
+        const sorted = approved.sort((a, b) => a.name.localeCompare(b.name));
+
+        const firstSix = sorted.slice(0, 5);
 
         const container = document.querySelector(".slide");
 

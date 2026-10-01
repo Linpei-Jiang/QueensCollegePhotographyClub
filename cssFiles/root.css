@@ -1,6 +1,5 @@
 * {margin: 0; padding: 0; text-decoration: none; box-sizing: border-box; list-style: none;}
 html, body {overscroll-behavior: none; background: var(--white);}
-body {overflow-x: hidden;}
 main {padding: 0 5%;}
 
 .gap {
@@ -13,6 +12,7 @@ main {padding: 0 5%;}
     --soft-gray: #F5F5F5;
     --neutral-gray: #D9D9D9;
     --graphite: #2B2B2B;
+    --main: #6e2611;
     --accent-orange: #FF6A3D;
 }
 

@@ -1,4 +1,4 @@
-fetch("https://opensheet.elk.sh/1oVwuDlwg7g-13UAW6Ih6OcnW8YPSWjtDZzm3kFSNiB4/Upcoming%20Events%20&%20Meetings")
+fetch("https://opensheet.elk.sh/1hYcNs4Ujxq3B-DQhU9R45S_Hdw7_kuig66DgsnwzgfI/Upcoming%20Events%20&%20Meetings")
     .then(res => res.json())
     .then(data => {
         // Today at midnight
@@ -22,7 +22,9 @@ fetch("https://opensheet.elk.sh/1oVwuDlwg7g-13UAW6Ih6OcnW8YPSWjtDZzm3kFSNiB4/Upc
         const container = document.querySelector(".upcomingEventsUpdates");
 
         firstFour.forEach(item => {
-            const card = document.createElement("div");
+            const card = document.createElement("a");
+            card.href = item.link;
+            card.target = "_blank";
             card.className = "upcomingEventsUpdatesCard";
 
             card.innerHTML = `
