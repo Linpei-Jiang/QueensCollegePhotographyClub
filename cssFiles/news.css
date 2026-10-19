@@ -1,0 +1,122 @@
+header, .dropdown {background: var(--white);}
+/*HERO SECTION START*/
+.hero {
+    padding: 120px 5%;
+    width: 100%;
+    height: 550px;
+    display: grid;
+    grid-template-columns: 65% calc(35% - 20px);
+    gap: 20px;
+    justify-content: space-between;
+}
+.heroLeft, .heroRight {
+    width: 100%;
+    height: 100%;
+    background: var(--accent-orange);
+    border-radius: 10px;
+    color: var(--white);
+}
+.heroLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3%;
+}
+.heroLeft h1 {
+    font-size: 7vw;
+    line-height: 6vw;
+}
+.breakingNews h2 {text-transform: uppercase;}
+@media (max-width: 768px) {
+    .hero {grid-template-columns: 100%;}
+    .heroLeft h1 {
+        font-size: 11vw;
+        line-height: 10vw;
+    }
+    .heroRight {display: none;}
+}
+/*HERO SECTION END*/
+
+
+/*NEWS & UPDATES SECTION START*/
+.newsUpdatesGrid {
+    margin-top: -50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.newsUpdatesGridCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px 10px 50px 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    color: var(--accent-orange);
+    transition: 0.3s;
+}
+.newsUpdatesGridCard:hover {
+    scale: 0.99;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.newsUpdatesGridCardImage {
+    width: 100%;
+    aspect-ratio: 1/0.7;
+    background: var(--header-footer);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+.newsUpdatesGridCard h3 {padding: 15px 0 25px 0; line-height: 20px;}
+.newsUpdatesGridCard p {font-size: 14px; margin-top: 10px;}
+.newsUpdatesGridCard hr {
+    background: var(--accent-orange);
+    width: 95%;
+    position: absolute;
+    bottom: 40px;
+    left: 2.5%;
+    height: 2px;
+}
+.newsUpdatesGridCardNewsOrUpdatesDates {
+    width: 100%;
+    position: absolute;
+    padding: 0 10px;
+    left: 0;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.newsUpdatesAsideRight {
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+.pagination button.active, .pagination button:hover {
+    background: var(--header-footer);
+    color: #fff;
+    font-weight: bold;
+}
+/*NEWS & UPDATES SECTION END*/
+

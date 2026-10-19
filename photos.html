@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCPhotographyClub - Photos</title>
+    <link rel="stylesheet" href="cssFiles/root.css">
+    <link rel="stylesheet" href="cssFiles/HEADER_FOOTER.css">
+    <link rel="stylesheet" href="cssFiles/photos.css">
+    <link rel="icon" type="svg" href="images/PhotoClubLogo.svg">
 </head>
 <body>
+    <header id="header" data-page="photos"></header>
 
+        <main style="padding: 120px 0;">
+<!--            <div class="hero">-->
+<!--                <div class="heroLeft">-->
+<!--                    <h1>Explore the QC Photography Club's Work</h1>-->
+<!--                </div>-->
+<!--                <div class="heroRight"></div>-->
+<!--            </div>-->
+
+            <div class="allPhotographsGrid"></div>
+            <div class="pagination"></div>
+            <div id="lightbox" class="lightbox">
+                <div class="lightbox-content">
+                    <button id="closeLightbox">&times;</button>
+                    <div class="lightbox-left">
+                        <img id="lightboxImage" src="" alt="">
+                    </div>
+                    <div class="lightbox-right">
+                        <h1 id="lightboxName"></h1>
+                        <p class="photographerName"><strong>Photographer:</strong> <span id="lightboxPhotographer"></span></p>
+                        <p class="workDescription"><strong>Description:</strong> <span id="lightboxDescription"></span></p>
+                        <p class="socialMeda"><Strong>Social Media Handle:</Strong> <span id="lightboxSocial"></span></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <footer id="footer"></footer>
 </body>
+    <script type="module" src="jsFiles/HEADER_FOOTER.js"></script>
+    <script src="jsFiles/displayAllPhotos.js"></script>
 </html>

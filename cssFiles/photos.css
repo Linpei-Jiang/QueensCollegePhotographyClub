@@ -1,0 +1,146 @@
+header, .dropdown {background: var(--white);}
+.hero {
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 65% calc(35% - 20px);
+    padding: 0 5%;
+    gap: 20px;
+    justify-content: space-between;
+}
+.heroLeft, .heroRight {
+    width: 100%;
+    height: 100%;
+    background: var(--accent-orange);
+    border-radius: 10px;
+    color: var(--white);
+}
+.heroLeft {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3%;
+}
+.heroLeft h1 {
+    position: absolute;
+    bottom: 20px;
+    font-size: 4.6vw;
+    line-height: 4.5vw;
+}
+.allPhotographsGrid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 5%;
+}
+.photoCard {
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 10px;
+    background-size: cover;
+    cursor: pointer;
+}
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+.pagination button.active, .pagination button:hover {
+    background: var(--accent-orange);
+    color: #fff;
+    font-weight: bold;
+}
+.darkBackground {
+    opacity: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.photoCard:hover .darkBackground {
+    opacity: 0.7;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999999999999;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-left, .lightbox-right {
+    width: 50%;
+}
+
+.lightbox-content {
+    width: 85%;
+    max-width: 1200px;
+    height: 80vh;
+    background: var(--soft-gray);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.lightbox-left, .lightbox-right {
+    width: 50%;
+    height: 100%;
+}
+
+#lightboxImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.lightbox-right {
+    padding: 25px 50px 25px 25px;
+}
+#lightboxName {font-size: 30px;}
+.workDescription {margin-top: 10px;}
+.socialMeda {
+    position: absolute;
+    bottom: 25px;
+}
+
+#closeLightbox {
+    background: white;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+#closeLightbox:hover {
+    background: var(--accent-orange);
+    color: white;
+}

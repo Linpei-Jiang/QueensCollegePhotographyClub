@@ -1,3 +1,4 @@
+header, .dropdown {background: var(--white);}
 h1, h3 {color: var(--graphite); text-align: center}
 #photoForm {
     padding: 100px 0;

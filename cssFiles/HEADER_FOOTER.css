@@ -7,7 +7,7 @@ header {
     display: flex;
     align-items: center;
 
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(106, 106, 106, 0.1);
     backdrop-filter: blur(4.9px);
     -webkit-backdrop-filter: blur(4.9px);
@@ -31,10 +31,9 @@ header {
 }
 
 .desktopNav li, .submissions {cursor: pointer;}
-.desktopNav li a {color: var(--main);}
-
+.desktopNav li a {color: var(--graphite);}
 .desktopNav li:hover, .submissions:hover {
-    font-weight: 500;
+    text-decoration: overline;
 }
 
 .desktopNav li:hover ul li {
@@ -56,10 +55,11 @@ header {
     padding: 5px 20px;
     pointer-events: auto;
     cursor: pointer;
+    text-decoration: none !important;
 }
 
 .dropdown li a {
-    color: var(--main);
+    color: var(--graphite);
 }
 
 .dropdown li:hover a {
@@ -151,6 +151,7 @@ header {
 
 #header[data-page="home"] header {.positionHome {font-weight: bold;}}
 #header[data-page="news"] header {.positionNews {font-weight: bold;}}
+#header[data-page="contact"] header {.positionContact {font-weight: bold; color: var(--main);}}
 #header[data-page="submissions"] header {.positionSubmissions {font-weight: bold;}}
 /*----- HEADER SECTION END -----*/
 

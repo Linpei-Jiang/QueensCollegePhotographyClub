@@ -20,7 +20,7 @@ fetch("https://opensheet.elk.sh/1hYcNs4Ujxq3B-DQhU9R45S_Hdw7_kuig66DgsnwzgfI/Gen
                 <div class="content">
                     <div class="name">${item.name}</div> 
                     <div class="description">${truncateWords(item.description, 20)}</div>
-                    <a href="#">Learn More</a> 
+<!--                    <a href="#">Learn More</a> -->
                 </div>
             `;
 
