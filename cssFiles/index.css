@@ -109,8 +109,8 @@ body.transparent header {
     margin: 25px 0;
     animation: heroShowImage 1s ease-in-out 0.3s 1 forwards;
 }
-.item a {
-    color: var(--graphite);
+.learnMore {
+    color: var(--graphite) !important;
     opacity: 0;
     padding: 5px 25px;
     background: var(--soft-gray);
@@ -119,7 +119,7 @@ body.transparent header {
     cursor: pointer;
     animation: fadeIn 1s ease-in-out 1s 1 forwards;
 }
-.item a:hover {background: var(--accent-orange);}
+.learnMore:hover {background: var(--accent-orange);}
 .button {
     position: absolute;
     width: 100%;
@@ -142,6 +142,44 @@ body.transparent header {
 .slideBtn:hover {background: var(--accent-orange);}
 @media (max-width: 768px) {.item .content {left: 50px;}}
 @media (max-width: 550px) {.item .content {left: 25px;}}
+
+#modal {
+    width: 100vw;
+    height: auto;
+    background: rgba(0,0,0,.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 9999999999999999999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalInfo {
+    width: 40%;
+    height: 100vh;
+    color: white;
+}
+.modalImage {width: 40%; aspect-ratio: 3/4; padding: 20px 0; border-radius: 10px;}
+
+.modalImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.modalInfo {padding: 50px;}
+#modalTitle {font-size: 30px;}
+#modalDescription {margin-top: 10px;}
+@media (max-width: 768px) {
+    #modal {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .modalInfo {width: 100%;}
+}
 /*HERO SECTION END*/
 
 /*UPCOMING EVENTS & MEETINGS SECTION START*/

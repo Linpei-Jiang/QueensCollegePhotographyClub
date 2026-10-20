@@ -144,3 +144,22 @@ header, .dropdown {background: var(--white);}
     background: var(--accent-orange);
     color: white;
 }
+.heroRight {
+    position: relative;
+}
+.heroRight a {
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    background: white;
+    color: var(--accent-orange);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.heroRight a:hover {
+    color: var(--graphite);
+}

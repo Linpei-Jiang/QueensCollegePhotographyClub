@@ -20,10 +20,20 @@ fetch("https://opensheet.elk.sh/1hYcNs4Ujxq3B-DQhU9R45S_Hdw7_kuig66DgsnwzgfI/Gen
                 <div class="content">
                     <div class="name">${item.name}</div> 
                     <div class="description">${truncateWords(item.description, 20)}</div>
-<!--                    <a href="#">Learn More</a> -->
+                    <a class="learnMore" href="#">Learn More</a> 
                 </div>
             `;
-
+            const learnMoreBtn = card.querySelector(".learnMore");
+            learnMoreBtn.addEventListener("click", (e) => {e.preventDefault();
+                document.getElementById('lightboxImage').src=item.image;
+                document.getElementById("modalTitle").textContent = item.title;
+                document.getElementById("modalName").textContent = item.name;
+                document.getElementById("modalDescription").textContent = item.description;
+                document.getElementById("modal").style.display = "flex";
+            });
+            document.getElementById("modal").addEventListener("click", () => {
+                document.getElementById("modal").style.display = "none";
+            });
             container.appendChild(card);
         });
     })
